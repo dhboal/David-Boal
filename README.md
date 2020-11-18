@@ -4,11 +4,15 @@ Project 1
 
 The files in this repository were used to configure the network depicted below.
 
-/Users/HaydenBoal/Documents/David-Boal/Diagrams/Project 1 Diagram.png
+ - https://github.com/dhboal/David-Boal/blob/main/David%20Boal%20Project%201/Diagrams/Diagram.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - https://bit.ly/ansible-david
+  
+  - https://github.com/dhboal/David-Boal/blob/main/David%20Boal%20Project%201/Anisble/bigredplaybook.yml
+  - https://github.com/dhboal/David-Boal/blob/main/David%20Boal%20Project%201/Anisble/filebeat-playbook.yml
+  - https://github.com/dhboal/David-Boal/blob/main/David%20Boal%20Project%201/Anisble/install-elk.yml
+  - https://github.com/dhboal/David-Boal/blob/main/David%20Boal%20Project%201/Anisble/metricbeat-playbook.yml
 
 This document contains the following details:
 - Description of the Topology
@@ -40,6 +44,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Jump Box | Gateway  | 10.0.0.1      | Linux |
 | Web-1      | Web Server | 10.0.0.5      | Linux |
 | Web-2      | Web Server | 10.0.0.7      | Linux |
+| Web-3      | Web Server | 10.0.0.8      | Linux  |
 | Bigredelk  | Monitoring | 10.1.0.4     | Linux |
 
 ### Access Policies
@@ -57,9 +62,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | port 22        | 24.125.199.27  |
-| Web-1      | port 22          | 52.118.153.253             |
-| Web-2       | port 22            | 52.118.153.253              |
+| Jump Box | port 22             | 24.125.199.27        |
+| Web-1    | port 22             | 52.118.153.253       |
+| Web-2    | port 22             | 52.118.153.253       |
+| Web-3    | port 22             | 52.118.153.253       |
+| Bigredelk    | port 22         | 104.210.12.6         |
 
 ### Elk Configuration
 
@@ -77,11 +84,11 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-/Users/HaydenBoal/Documents/David-Boal/Screenshots/Docker PS.png
+  - https://github.com/dhboal/David-Boal/blob/main/David%20Boal%20Project%201/Screenshots/Docker%20PS.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- __10.0.0.5 10.0.0.7__
+- __10.0.0.5 10.0.0.7 10.0.0.8__
 
 We have installed the following Beats on these machines:
 - __filebeat and metricbeat__
